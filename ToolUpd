@@ -353,6 +353,35 @@ RS.RenderStepped:Connect(function()
                 Prey = nil
             end
         end
+		if getgenv().Memelouse3150.Silent.AutoPrediction then
+            local ping = Client:GetNetworkPing() * 2000
+            if ping > 120 then
+                getgenv().Memelouse3150.Silent.PredictionVelocity = 0.15465
+            elseif ping > 110 then
+                getgenv().Memelouse3150.Silent.PredictionVelocity = 0.14965
+            elseif ping > 100 then
+                getgenv().Memelouse3150.Silent.PredictionVelocity = 0.1455
+            elseif ping > 90 then
+                getgenv().Memelouse3150.Silent.PredictionVelocity = 0.141
+            elseif ping > 80 then
+                getgenv().Memelouse3150.Silent.PredictionVelocity = 0.138
+            elseif ping > 70 then
+                getgenv().Memelouse3150.Silent.PredictionVelocity = 0.1345
+            elseif ping > 60 then
+                getgenv().Memelouse3150.Silent.PredictionVelocity = 0.132
+            elseif ping > 50 then
+                getgenv().Memelouse3150.Silent.PredictionVelocity = 0.129668
+            elseif ping > 40 then
+                getgenv().Memelouse3150.Silent.PredictionVelocity = 0.12405
+            elseif ping > 30 then
+                getgenv().Memelouse3150.Silent.PredictionVelocity = 0.11
+            elseif ping > 20 then
+                getgenv().Memelouse3150.Silent.PredictionVelocity = 0.102
+            elseif ping > 10 then
+                getgenv().Memelouse3150.Silent.PredictionVelocity = 0.9
+            end
+        end
+	end
     if getgenv().Memelouse3150.Tracer.Enabled == true then
         if getgenv().Memelouse3150.Tracer.CheckIf_KO == true and Plr and Plr.Character then 
             local KOd = Plr.Character:WaitForChild("BodyEffects")["K.O"].Value
